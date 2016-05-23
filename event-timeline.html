@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Business, Society and Public Policy Initiative Timeline:
+</title>
+
+  <style type="text/css">
+   * {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  body, html {
+    width: 100%;
+    height: 100%;
+  }
+
+  .wrapper {
+    position: relative;
+    padding: 50px 5%;
+    margin: 2%;
+    overflow: scroll;
+  }
+  .timeline-container { 
+    overflow:hidden;
+  }
+
+  .timeline-container div {
+   padding: 10px;
+ }
+ .timeline {
+  position: absolute;
+  width: 4px;
+  top: 25px;
+  bottom: 25px;
+  left: 50%;
+  margin-left: -2px;
+  background: #AAA;
+  -webkit-transition: 600ms cubic-bezier(0.68, -0.67, 0.14, 1.51);
+  transition: 600ms cubic-bezier(0.68, -0.67, 0.14, 1.51);
+}
+
+.timeline:after {
+  content: " ";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: #eee;
+  border-radius: 50%;
+  bottom: -50px;
+  left: -23px;
+}
+
+.timeline:before {
+  content: " ";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: #eee;
+  border-radius: 50%;
+  left: -23px;
+  top: -50px;
+}
+
+.momentscontainer {
+  padding-top: 40px;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.moment {
+  background: #009970;
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #009970), color-stop(100%, #4f8b99));
+  background: -webkit-linear-gradient(-45deg, #6faab9 0%, #4f8b99 100%);
+  background: -webkit-linear-gradient(315deg, #6faab9 0%, #4f8b99 100%);
+  background: linear-gradient(135deg, #167ac6 0%, #1254c4 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009970', endColorstr='#4f8b99', GradientType=1 );
+}
+
+.moment {
+  clear: both;
+  color: #fff;
+  padding: 25px 40px 30px;
+  width: 50%;
+  margin: -10% -30px 40px;
+  position: relative;
+  -webkit-transition: 800ms cubic-bezier(0.68, -0.67, 0.14, 1.51);
+  transition: 800ms cubic-bezier(0.68, -0.67, 0.14, 1.51);
+}
+
+.moment:first-child {
+  margin-top: 0;
+}
+
+.moment.right {
+  float: right;
+}
+
+.moment.left {
+  float: left;
+}
+
+.moment:after {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.5px 15px 7.5px 0;
+  border-color: transparent #6faab9 transparent transparent;
+  position: absolute;
+  top: 20px;
+  left: -15px;
+}
+
+.moment:before {
+  content: " ";
+  position: absolute;
+  top: 11px;
+  left: -40px;
+  background: #fff;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 6px solid #aaa;
+}
+
+.moment.left:before {
+  left: auto;
+  right: -40px;
+}
+
+.moment.left:after {
+  left: auto;
+  right: -15px;
+  border-width: 7.5px 0 7.5px 15px;
+  border-color: transparent transparent transparent #4f8b99;
+}
+
+.date {
+  position: absolute;
+  top: -40px;
+  width: 100%;
+}
+
+.moment.right .date {
+  text-align: left;
+  right: 0;
+}
+
+.moment.left .date {
+  text-align: right;
+  left: 0;
+}
+
+.date h4 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 200;
+  color: #333;
+}
+
+.name, .desc {
+  font-weight: 200;
+}
+.name{
+  line-height: 30px;
+}
+.desc {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.photo {
+  border-radius: 4px;
+}
+
+#one {
+  float:left; 
+
+}
+#two { 
+  margin:10px;
+  
+}
+
+
+@media screen and (min-width: 1000px) {
+  .moment {
+    margin-top: -80px;
+
+  }
+
+}
+@media screen and (max-width: 400px) {
+  .moment {
+    margin: 25px 0 25px 30px;
+    width: 95%;
+    -webkit-transition: 700ms cubic-bezier(0.48, -0.67, 0.14, 1.21);
+    transition: 700ms cubic-bezier(0.48, -0.67, 0.14, 1.21);
+  }
+
+  .moment.left, .moment.right {
+    float: left;
+  }
+
+  .moment.left .date {
+    text-align: left;
+    left: 0;
+  }
+
+  .moment.left:before {
+    right: auto;
+    left: -47px;
+  }
+
+  .moment.left:after {
+    right: auto;
+    left: -15px;
+    border-width: 7.5px 15px 7.5px 0;
+    border-color: transparent #6faab9 transparent transparent;
+  }
+
+  .moment.right:before {
+    left: -47px;
+  }
+
+  .timeline {
+    left: 5%;
+  }
+  #one { 
+    float: none;
+    margin-right:0;
+    width:auto;
+    border:0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .moment {
+  padding: 25px 10px 30px;
+  }
+}
+</style>
+
+</head>
+<body class="backgroundTableGradient" bgcolor="ecf0f1">
+  <div class="wrapper">
+    <div class="timeline"></div>
+    <div class="momentscontainer">
+
+
+      <div class="moment right">
+        <div class="date">
+          <h4>April 18, 2016</h4>
+        </div>
+        <div class="timeline-container">
+          <div id="two">
+            <p class="desc">The initiative supports Georgetown McDonough’s Business Government Alliance and the McCourt School of Public Policy in their co-sponsorship of “Public Private Partnerships: Stories of Success.” The event featured board member Hon. Anthony Williams, former Puerto Rico Governor Luis Fortuno, and Mary-Claire Burick, president of the Rosslyn Business Improvement District. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="moment left">
+        <div class="date">
+          <h4>April 15, 2016</h4>
+        </div>
+        <div class="timeline-container">
+          <div id="two">
+            <p class="desc">The initiative supports Georgetown McDonough’s European Business Association in its sponsorship of “Lessons from the Bank of Latvia: A Conversation with Governor Ilmārs Rimšēvičs.” Managing Director Jim Moore introduces the Central Bank Governor of Latvia on behalf of Georgetown McDonough. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="moment right">
+        <div class="date">
+          <h4>April 12, 2016</h4>
+        </div>
+        <div class="timeline-container">
+          <div id="two">
+            <p class="desc">The initiative distributes its fourth newsletter, which includes a Q&A with board member Tom Farley, president of the New York Stock Exchange, and a Q&A with Jeff Reid, founding director of the Georgetown Entrepreneurship Initiative 
+<br><br><a style="color:#ffeebb;"href="http://msbnews.com/bsppi/004/index-3-4.html ">(Continue...)</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="moment left">
+        <div class="date">
+          <h4>March 15, 2016</h4>
+        </div>
+        <div class="timeline-container">
+
+            <p class="desc">The initiative and the Georgetown Institute of Politics and Public Service co-sponsor “Reflections on Running: A Conversation with Former Hewlett Packard CEO Carly Fiorina” 
+<br><br><a style="color:#ffeebb;"href="http://www.thehoya.com/fiorina-talks-presidential-campaign-future-plans/ ">(Continue...)</a></p>
+        </div>
+      </div>
+
+
+      <div class="moment right">
+        <div class="date">
+          <h4>February 23, 2016</h4>
+        </div>
+        <div class="timeline-container">
+            <p class="desc">The initiative coordinates the Business and Government Alliance and McCourt School’s participation in a SIRIUS XM radio interview with Sen. Trent Lott and board member Sen. Tom Daschle about on their new book, <em>Crisis Point </em> <br><br><a style="color:#ffeebb;"href="http://www.georgetownafricabusinessconference.com/">(Continue...)</a></p>
+        </div>
+      </div>
+        <div class="moment left">
+        <div class="date">
+          <h4>February 6, 2016</h4>
+        </div>
+        <div class="timeline-container">
+          <div id="one">
+            <img class="photo" src="http://msbnews.com/bsppi/timeline/img/2-6-2016.jpg" alt="" border="0" width="100%" height="100%" />
+          </div>
+          <div id="two">
+            <p class="desc">Africa Rising Conference, supported by the initiative, is held at Georgetown McDonough School of Business. <br><br><a style="color:#ffeebb;"href="http://www.georgetownafricabusinessconference.com/">(Continue...)</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="moment right">
+        <div class="date">
+          <h4>January 7, 2016</h4>
+        </div>
+        <div class="timeline-container">
+          <div id="two"><h2 class="name"><em>Financial Times</em> Interview </h2>
+            <p class="desc">Managing Director Jim Moore interviewed by the <em>Financial Times</em> regarding the role of business schools in preparing future business and political leaders <br><br>
+            <a style="color:#ffeebb;"href="http://video.ft.com/4608441108001/Politics-on-agenda-in-companies/Business-School ">(Continue...)</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="moment left">
+        <div class="date">
+          <h4>December 4, 2015</h4>
+        </div>
+        <h2 class="name">The initiative releases its first video</h2>
+        <p class="desc"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/MLRpeu3bDWE" frameborder="0" allowfullscreen></iframe></p>
+      </div>
+
+
+      <div class="moment right">
+        <div class="date">
+          <h4>October 28, 2015</h4>
+        </div>
+        <div class="timeline-container">
+          <div id="one">
+            <img class="photo" src="http://msbnews.com/bsppi/timeline/img/10-28-2015.jpg" alt="" border="0" width="100%" height="100%" />
+          </div>
+          <div id="two">
+            <p class="desc">Initiative holds advisory board meeting in London, England<br><br> <a style="color:#ffeebb;"href="http://msbnews.com/bsppi/004/index-3-4.html"> (Continue...)</a></p>
+         </div>
+       </div>
+     </div>
+
+     <div class="moment left">
+      <div class="date">
+        <h4>September 25, 2015</h4>
+      </div>
+      <p class="desc">A white paper based on discussions during Caux Roundtable meetings is submitted to the UN Secretariat and UN delegates at the opening of the UN General Assembly and UN Sustainable Development Summit.<br><br><a style="color:#ffeebb;"href="http://msb.georgetown.edu/newsroom/news/georgetown-mcdonough-provides-input-un-sustainability-document"> (Continue...)</a></p>
+    </div>
+
+    <div class="moment right">
+      <div class="date">
+        <h4>September 8, 2015</h4>
+      </div>
+      <div class="timeline-container">
+        <div id="one">
+          <img class="photo" src="http://msbnews.com/bsppi/timeline/img/9-8-2015.jpg" alt="" border="0" width="100%" height="100%" />
+        </div>
+        <div id="two">
+          <p class="desc">The initiative and the Stanton Distinguished Leaders Series sponsors an on-campus lunch and discussion for students with former Microsoft CEO Robbie Bach <br><br><a style="color:#ffeebb;"href="https://www.facebook.com/GeorgetownMcDonough/posts/10156056725355608">(Continue...)</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="moment left">
+      <div class="date">
+        <h4>July 20, 2015</h4>
+      </div> 
+      <div class="timeline-container">
+
+      <p class="desc">The initiative distributes its third newsletter, which includes a Q&A with Board Chair Lady Barbara Judge, C.B.E. and a story about the Steers Center for Global Real Estate</h2><br><br>
+      <a style="color:#ffeebb;"href="http://msbnews.com/bsppi/003/ "> (Continue...)</a></p>
+      </div>
+    </div>
+
+    <div class="moment right">
+      <div class="date">
+        <h4>July 16, 2015</h4>
+      </div>
+            <div class="timeline-container">
+
+      <p class="desc">The initiative and several Georgetown faculty and MBA alumni participate in a Caux Roundtable meeting to address global economic sustainability for a report to the United Nations <br><br> <a style="color:#ffeebb;"href="http://msb.georgetown.edu/newsroom/news/georgetown-mcdonough-provides-input-un-sustainability-document">(Continue...)</a></p>
+      </div>
+    </div>
+
+    <div class="moment left">
+      <div class="date">
+        <h4>April 25, 2015</h4>
+      </div>
+            <div class="timeline-container">
+
+      <p class="desc">Georgetown McDonough launches Steers Center for Global Real Estate <br><br> <a style="color:#ffeebb;"href="http://msb.georgetown.edu/content/qa-matthew-cypher">(Continue...)</a></p>
+      </div>
+    </div>
+
+    <div class="moment right">
+      <div class="date">
+        <h4>April 22, 2015</h4>
+      </div>
+      <div class="timeline-container">
+        <div id="one">
+          <img class="photo" src="http://msbnews.com/bsppi/timeline/img/4-22-2015.jpg" alt="" border="0" width="100%" height="100%" />
+        </div>
+        <div id="two">
+          <p class="desc">Managing Director Jim Moore is featured in <em>Financial Times </em> <br><br> <a style="color:#ffeebb;"href="http://www.ft.com/intl/cms/s/2/ae6bb43a-e50d-11e4-bb4b-00144feab7de.html#axzz3Xrh570bt">(Continue...)</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="moment left">
+      <div class="date">
+        <h4>April 13, 2015</h4>
+      </div>
+            <div class="timeline-container">
+
+      <p class="desc"> CNN’s Christiane Amanpour interviews Lady Barbara Judge about women in business <br><br> <a style="color:#ffeebb;"href="http://www.cnn.com/videos/world/2015/04/13/intv-amanpour-lady-barbara-judge.cnn ">(Continue...)</a></p>
+      </div>
+    </div>
+
+    <div class="moment right">
+      <div class="date">
+        <h4>April 9, 2015</h4>
+      </div>
+      <div class="timeline-container">
+        <div id="one">
+          <img class="photo" src="http://msbnews.com/bsppi/timeline/img/4-9-2015.jpg" alt="" border="0" width="100%" height="100%" />
+        </div>
+        <div id="two">
+          <p class="desc">Initiative holds inaugural Hariri Symposium and advisory board meeting <br><br> <a style="color:#ffeebb;"href="http://msb.georgetown.edu/newsroom/news/hariri-symposium-tackles-challenges-asserts-role-business-education ">(Continue...)</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="moment left">
+      <div class="date">
+        <h4>March 30, 2015</h4>
+      </div>
+            <div class="timeline-container">
+
+      <p class="desc">The initiative distributes its second newsletter, which includes a Q&A with board member Eric Trump and a Q&A with Professors Catherine Tinsley and Robin Dillon-Merrill <br><br> <a style="color:#ffeebb;"href="http://msbnews.com/bsppi/002/">(Continue...)</a></p>
+      </div>
+    </div>
+
+    <div class="moment right">
+      <div class="date">
+        <h4>March 26, 2015</h4>
+      </div>
+      <div class="timeline-container">
+        <div id="one">
+          <img class="photo" src="http://msbnews.com/bsppi/timeline/img/3-26-2015.jpg" alt="" border="0" width="100%" height="100%" />
+        </div>
+        <div id="two">
+          <p class="desc">Georgetown McDonough and the Bipartisan Policy Center announce a collaborative relationship and partnership <br><br> <a style="color:#ffeebb;"href="http://msb.georgetown.edu/content/georgetown-mcdonough-partner-bipartisan-policy-center"></a></p>
+        </div>
+      </div>
+    </div>    
+
+    <div class="moment left">
+      <div class="date">
+        <h4> March 20, 2015</h4>
+      </div>
+            <div class="timeline-container">
+
+      <p class="desc">Board member Anthony Williams gives the opening address at the 21st McCourt School Policy Conference. <br><br> <a style="color:#ffeebb;"href="https://mccourt.georgetown.edu/news/policy_conference_2015"></a> </p>
+      </div>
+    </div>
+
+    
+
+    <div class="moment right">
+      <div class="date">
+      <h4>March 2015</h4>
+      </div>
+      <div class="timeline-container">
+        <div id="one">
+          <img class="photo" src="http://msbnews.com/bsppi/timeline/img/3-2015.jpg" alt="" border="0" width="100%" height="100%" />
+        </div>
+        <div id="two">
+          <p class="desc">Lady Barbara Judge C.B.E. named chair of the advisory board.<br><br><a style="color:#ffeebb;"href="https://msb.georgetown.edu/content/biography-lady-barbara-judge-cbe-0">(Continue...)</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="moment left">
+      <div class="date">
+        <h4>February 10, 2015</h4>
+      </div>
+            <div class="timeline-container">
+      <div id="one">
+          <img class="photo" src="http://msbnews.com/bsppi/timeline/img/02-10-2015.jpg" alt="" border="0" width="100%" height="100%" />
+        </div>
+      <div id="two">
+
+      <p class="desc">Jose Manuel Barroso joins the initiative’s advisory board<br><br>
+      <a style="color:#ffeebb;"href="http://msb.georgetown.edu/newsroom/news/jose-barroso-joins-business-society-and-public-policy-initiative ">(Continue...)</a></p>
+      </div>
+      </div>
+    </div>
+
+    <div class="moment right">
+      <div class="date">
+        <h4>February 4, 2015</h4>
+      </div>
+            <div class="timeline-container">
+
+      <p class="desc">Initiative featured in BizEd Magazine </p><br><br>
+      <a class="desc" style="color:#ffeebb;"href="http://www.bizedmagazine.com/archives/2015/1/people-and-places/new-programs/">(Continue...)</a></p></div>
+    </div>
+    <div class="moment left">
+      <div class="date">
+        <h4>January 2015</h4>
+      </div>
+            <div class="timeline-container">
+
+      <p class="desc"> Initiative distributes its first e-newsletter, highlighting new members of the advisory board </p>
+      <br><br>
+      <a class="desc" style="color:#ffeebb;"href="http://msbnews.com/bsppi/001/">(Continue...)</a>
+      </div>
+    </div>    
+    <div class="moment right">
+      <div class="date">
+        <h4>November 14, 2014</h4>
+      </div>
+            <div class="timeline-container">
+
+      <p class="desc">Managing Director Jim Moore is named to D.C. Mayor-elect Muriel Bowser’s transition team, focusing on jobs and economic development </p><br><br>
+      <a class="desc" style="color:#ffeebb;"href="http://msb.georgetown.edu/newsroom/news/moore-named-dc-mayoral-transition-team">(Continue...)</a>
+      </div>
+    </div>    
+    <div class="moment left">
+      <div class="date">
+        <h4>October 20, 2014</h4>
+      </div>
+      <div class="timeline-container">
+        <div id="one">
+          <img class="photo" src="http://msbnews.com/bsppi/timeline/img/10-20-2014.jpg" alt="" border="0" width="100%" height="100%" />
+        </div>
+        <div id="two">
+          <p class="desc"> Sheikh Dr. Khalid bin Thani al-Thani, member of the initiative’s advisory board, is featured in the <em>Gulf Times</em> in Qatar</p><br><br>
+         <a class="desc" style="color:#ffeebb;"href="http://www.gulf-times.com/story/413060/Sheikh-Dr-Khalid-on-advisory-board-of-Georgetown-M "></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="moment right">
+      <div class="date">
+        <h4>October 15, 2014</h4>
+      </div>
+      <div class="timeline-container">
+        <div id="one">
+          <img class="photo" src="http://msbnews.com/bsppi/timeline/img/10-15-2014.jpg" alt="" border="0" width="100%" height="100%" />
+        </div>
+        <div id="two">
+          <p class="desc">The initiative is officially launched</p> <br><br>
+         <a class="desc" style="color:#ffeebb;"href="http://www.thehoya.com/public-policy-initiative-launched"></a>
+        </div>
+      </div>
+    </div>    
+
+  </div>
+</div>
+
+</body>
